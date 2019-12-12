@@ -6,13 +6,20 @@ This is my COGS 109 Final Project where we attempted to create a model that can 
 ## Methods
 This model works by taking in each pixel in the image as an input, and the existence of each fruit (represented as 0 or 1) as the output, using ~4500 images as training data. First the model uses [PCA (Principal Component Analysis)](https://en.wikipedia.org/wiki/Principal_component_analysis) to reduce the number of input parameters greatly, from 100x100x3 (length x width x rgb) input parameters to only 20. Then it uses [K-fold cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation) to choose an optimal number of principal components to use. Finally we use logistic regression to actually train the model. 
 
-After doing PCA, we can reconstruct the images using our 20 PCs. With our first dataset (COCO dataset), the images were too complex so 20 PCs were not sufficient to reproduce the original image. ![Coco original 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/prePCA1.png)![Coco PCA 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/postPCA1.png)
+After doing PCA, we can reconstruct the images using our 20 PCs. With our first dataset (COCO dataset), the images were too complex so 20 PCs were not sufficient to reproduce the original image. 
+
+![Coco original 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/prePCA1.png)![Coco PCA 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/postPCA1.png)
+
 Left: Original image  ---------------------- Right: After PCA Reconstruction
+
 ![Coco original 2](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/prePCA2.png)![Coco PCA 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/postPCA2.png)
+
 Left: Original image  ---------------------- Right: After PCA Reconstruction
 
 Due to the inaccurate reconstructions of the original images, we decided to use the Kaggle dataset, [Fruits 360](https://www.kaggle.com/moltean/fruits). These images are a lot less complicated, so the reconstructions are a lot better.
+
 ![Kaggle PCA 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/applePCA1.png)![Kaggle PCA 2](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/applePCA2.png)![Kaggle PCA 3](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/bananaPCA.png)
+
 Above: After PCA Reconstruction
 Below: Original Image
 
