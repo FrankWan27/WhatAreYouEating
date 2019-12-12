@@ -21,6 +21,7 @@ Due to the inaccurate reconstructions of the original images, we decided to use 
 ![Kaggle PCA 1](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/applePCA1.png)![Kaggle PCA 2](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/applePCA2.png)![Kaggle PCA 3](https://raw.githubusercontent.com/FrankWan27/WhatAreYouEating/master/report%20images/bananaPCA.png)
 
 Above: After PCA Reconstruction
+
 Below: Original Image
 
 ## Results
