@@ -1,7 +1,7 @@
 
 # What Are You Eating?
 
-This is my COGS 109 Final Project where we attempted to create a model that can predict what fruit (apple, banana, orange, or pineapple) an image is of.
+This is my first attempt to create a machine learning model that can classify what fruit (apple, banana, orange, or pineapple) an image is of.
 
 ## Methods
 This model works by taking in each pixel in the image as an input, and the existence of each fruit (represented as 0 or 1) as the output, using ~4500 images as training data. First the model uses [PCA (Principal Component Analysis)](https://en.wikipedia.org/wiki/Principal_component_analysis) to reduce the number of input parameters greatly, from 100x100x3 (length x width x rgb) input parameters to only 20. Then it uses [K-fold cross validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation) to choose an optimal number of principal components to use. Finally we use logistic regression to actually train the model. 
